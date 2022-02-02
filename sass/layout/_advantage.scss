@@ -1,0 +1,26 @@
+.advantage {
+  padding-bottom: 0;
+}
+.advatage__title {
+  @include font(14px, null, 16px, null);
+  text-transform: uppercase;
+  color: var(--first-title-color);
+  margin-bottom: 10px;
+}
+.advatage__after-title {
+  line-height: calc(24 / 14);
+}
+.advantage__list {
+  @include flex-wrap();
+}
+.advantage__item {
+  flex-basis: calc(100% / 4 - 30px);
+  margin-left: 30px;
+  margin-top: 30px;
+}
+.advantage__icon {
+  @include flex-center();
+  min-height: 120px;
+  background-color: var(--background-color-advatage);
+  margin-bottom: 30px;
+}

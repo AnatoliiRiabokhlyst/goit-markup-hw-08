@@ -1,0 +1,104 @@
+.footer {
+  padding-top: 60px;
+  padding-bottom: 60px;
+  background-color: var(--background-color-footer);
+}
+.footer__logo-link {
+  display: block;
+  margin-bottom: 20px;
+}
+.address__item:not(:last-child) {
+  margin-bottom: 9px;
+}
+
+.address__link {
+  font-style: normal;
+  line-height: calc(24 / 14);
+  color: rgba(255, 255, 255, 0.6);
+  transition: color var(--transition);
+  &:hover,
+  &:focus {
+    color: var(--accent-color);
+    outline: none;
+  }
+}
+.footer-link {
+  color: var(--second-title-color);
+}
+.footer__title {
+  @include font(14px, 700, 16px, null);
+  text-transform: uppercase;
+  color: var(--second-title-color);
+  margin-bottom: 20px;
+}
+.footer__list {
+  display: flex;
+  align-items: baseline;
+}
+.footer__item:not(:last-child) {
+  margin-right: 70px;
+}
+.footer__item:last-child {
+  margin-left: auto;
+}
+.footer .social__link {
+  background-color: rgba(255, 255, 255, 0.1);
+  color: #ffffff;
+}
+.social__link {
+  &:hover,
+  &:focus {
+    background-color: var(--accent-color);
+    color: #ffffff;
+    outline: none;
+  }
+}
+.footer__social-icon {
+  fill: currentColor;
+}
+.footer-form {
+  align-content: flex-end;
+  display: flex;
+}
+.footer-form__input {
+  width: 358px;
+  height: 50px;
+  border: 1px solid rgba(255, 255, 255, 0.3);
+  box-sizing: border-box;
+  filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.15));
+  border-radius: 4px;
+  @include font(16px, null, 20px, null);
+  color: rgba(255, 255, 255, 0.6);
+  background: transparent;
+  padding-left: 16px;
+  padding-top: 15px;
+  padding-bottom: 15px;
+  transition: border-color var(--transition);
+  &:hover,
+  &:focus {
+    border-color: var(--accent-color);
+    outline: none;
+  }
+}
+.footer-form__btn {
+  @include font(16px, 700, 30px, 0.06em);
+  color: var(--btn-color);
+  background-color: var(--accent-color);
+  box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.15);
+  border-radius: 4px;
+  width: 200px;
+  height: 50px;
+  margin-left: 12px;
+  @include flex-center();
+  border: none;
+  transition: background-color var(--transition);
+  &:hover,
+  &:focus {
+    background-color: #188ce8;
+    outline: none;
+  }
+}
+.footer-form__icon {
+  fill: var(--btn-color);
+  margin-left: 10px;
+}

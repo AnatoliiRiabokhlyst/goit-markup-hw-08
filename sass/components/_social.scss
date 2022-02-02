@@ -1,0 +1,17 @@
+.social__list {
+  @include flex-center();
+}
+.social__link {
+  width: 44px;
+  height: 44px;
+  @include flex-center();
+  border-radius: 50%;
+  color: #afb1b8;
+  transition: color var(--transition), background-color var(--transition);
+}
+.social__item:not(:last-child) {
+  margin-right: 10px;
+}
+.social__icon {
+  fill: currentColor;
+}

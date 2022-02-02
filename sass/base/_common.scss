@@ -1,0 +1,14 @@
+body {
+  font-size: 14px;
+  font-family: "Roboto", sans-serif;
+  color: var(--main-color);
+  background-color: #ffffff;
+  letter-spacing: 0.03em;
+}
+.list {
+  list-style: none;
+}
+.link {
+  text-decoration: none;
+  color: inherit;
+}
