@@ -36,14 +36,43 @@
   flex-direction: column;
   align-items: center;
   text-align: center;
-  // align-items: baseline;
+  @media screen and (min-width: 768px) {
+    flex-wrap: wrap;
+    flex-direction: row;
+    align-items: baseline;
+    align-content: space-between;
+    margin-top: -30px;
+    margin-left: -30px;
+  }
+  @media screen and (min-width: 1200px) {
+    flex-wrap: nowrap;
+    align-content: flex-start;
+    margin-top: 0;
+    margin-left: 0;
+  }
+}
+.footer__item {
+  @media screen and (min-width: 768px) {
+    flex-basis: calc(100% / 2 - 30px);
+    margin-top: 30px;
+    margin-left: 30px;
+  }
 }
 .footer__item:not(:last-child) {
   margin-bottom: 60px;
-  // margin-right: 70px;
+  @media screen and (min-width: 1200px) {
+    margin-bottom: 0;
+    margin-right: 70px;
+  }
 }
 .footer__item:last-child {
-  // margin-left: auto;
+  @media screen and (min-width: 768px) {
+    margin: auto;
+  }
+  @media screen and (min-width: 1200px) {
+    margin: 0;
+    margin-left: auto;
+  }
 }
 .footer .social__link {
   background-color: rgba(255, 255, 255, 0.1);
@@ -61,15 +90,16 @@
   fill: currentColor;
 }
 .footer-form {
-  // align-content: flex-end;
-  // display: flex;
+  @media screen and (min-width: 1200px) {
+    align-content: flex-end;
+    display: flex;
+  }
 }
 .footer-form__input {
   @media screen and (max-width: 479px) {
     width: 320px;
   }
   width: 450px;
-  // width: 358px;
   height: 50px;
   border: 1px solid rgba(255, 255, 255, 0.3);
   box-sizing: border-box;
@@ -87,6 +117,9 @@
     border-color: var(--accent-color);
     outline: none;
   }
+  @media screen and (min-width: 1200px) {
+    width: 358px;
+  }
 }
 .footer-form__btn {
   @include font(16px, 700, 30px, 0.06em);
@@ -96,7 +129,6 @@
   border-radius: 4px;
   width: 200px;
   height: 50px;
-  // margin-left: 12px;
   @include flex-center();
   border: none;
   transition: background-color var(--transition);
@@ -107,6 +139,10 @@
   }
   margin: auto;
   margin-top: 20px;
+  @media screen and (min-width: 1200px) {
+    margin: 0;
+    margin-left: 12px;
+  }
 }
 .footer-form__icon {
   fill: var(--btn-color);
