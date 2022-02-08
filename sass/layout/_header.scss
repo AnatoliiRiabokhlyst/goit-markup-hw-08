@@ -13,7 +13,7 @@
 }
 .nav__list {
   display: none;
-  @media screen and (min-width: 1200px) {
+  @media screen and (min-width: 768px) {
     color: var(--link-color);
     @include flex-center(flex, null, center);
   }
@@ -38,12 +38,27 @@
 }
 .contact__list {
   display: none;
-  @media screen and (min-width: 1200px) {
+  @media screen and (min-width: 768px) {
     display: flex;
+    flex-direction: column;
+  }
+  @media screen and (min-width: 1200px) {
+    flex-direction: row;
   }
 }
 .contact__item:not(:last-child) {
-  margin-right: 50px;
+  @media screen and (min-width: 768px) {
+    margin-bottom: 10px;
+  }
+  @media screen and (min-width: 1200px) {
+    margin-right: 50px;
+    margin-bottom: 0;
+  }
+}
+.contact__link {
+  @media screen and (max-width: 1199px) {
+    padding: 0;
+  }
 }
 .contact__icon {
   margin-right: 10px;
@@ -74,6 +89,9 @@
   &:hover,
   &:focus {
     color: var(--accent-color);
+  }
+  @media screen and (min-width: 768px) {
+    display: none;
   }
 }
 .menu-icon {

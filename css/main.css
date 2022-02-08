@@ -155,7 +155,7 @@ body {
   display: none;
 }
 
-@media screen and (min-width: 1200px) {
+@media screen and (min-width: 768px) {
   .nav__list {
     color: var(--link-color);
     display: flex;
@@ -194,14 +194,36 @@ body {
   display: none;
 }
 
-@media screen and (min-width: 1200px) {
+@media screen and (min-width: 768px) {
   .contact__list {
     display: flex;
+    flex-direction: column;
   }
 }
 
-.contact__item:not(:last-child) {
-  margin-right: 50px;
+@media screen and (min-width: 1200px) {
+  .contact__list {
+    flex-direction: row;
+  }
+}
+
+@media screen and (min-width: 768px) {
+  .contact__item:not(:last-child) {
+    margin-bottom: 10px;
+  }
+}
+
+@media screen and (min-width: 1200px) {
+  .contact__item:not(:last-child) {
+    margin-right: 50px;
+    margin-bottom: 0;
+  }
+}
+
+@media screen and (max-width: 1199px) {
+  .contact__link {
+    padding: 0;
+  }
 }
 
 .contact__icon {
@@ -237,6 +259,12 @@ body {
 
 .menu-open-btn:hover, .menu-open-btn:focus {
   color: var(--accent-color);
+}
+
+@media screen and (min-width: 768px) {
+  .menu-open-btn {
+    display: none;
+  }
 }
 
 .menu-icon {
@@ -872,26 +900,61 @@ body {
 
 .portfolio-filter-list {
   display: flex;
-  justify-content: center;
-  margin-bottom: 34px;
+  flex-wrap: wrap;
+  justify-content: flex-start;
+  align-content: flex-start;
+  margin-bottom: 25px;
+}
+
+@media screen and (min-width: 768px) {
+  .portfolio-filter-list {
+    display: flex;
+    justify-content: center;
+    margin-bottom: 15px;
+  }
+}
+
+@media screen and (min-width: 1200px) {
+  .portfolio-filter-list {
+    display: flex;
+    justify-content: center;
+    margin-bottom: 19px;
+  }
 }
 
 .portfolio-filter-list__item:not(:last-child) {
   margin-right: 8px;
+  margin-bottom: 15px;
 }
 
-.portfolio-list {
-  display: flex;
-  flex-wrap: wrap;
-  margin-left: -30px;
-  margin-top: -30px;
+@media screen and (min-width: 768px) {
+  .portfolio-list {
+    display: flex;
+    flex-wrap: wrap;
+    margin-left: -30px;
+    margin-top: -30px;
+  }
 }
 
-.portfolio-list__item-example {
-  display: flex;
-  flex-basis: calc(100% / 3 - 30px);
-  margin-left: 30px;
-  margin-top: 30px;
+@media screen and (min-width: 768px) {
+  .portfolio-list__item-example {
+    display: flex;
+    flex-basis: calc(100% / 2 - 30px);
+    margin-left: 30px;
+    margin-top: 30px;
+  }
+}
+
+@media screen and (min-width: 1200px) {
+  .portfolio-list__item-example {
+    flex-basis: calc(100% / 3 - 30px);
+  }
+}
+
+@media screen and (max-width: 767px) {
+  .portfolio-list__item-example:not(:last-child) {
+    margin-bottom: 30px;
+  }
 }
 
 .portfolio-list__link-example {
