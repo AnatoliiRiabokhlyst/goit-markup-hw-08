@@ -24,7 +24,7 @@
 }
 .portfolio-list__item-example {
   @media screen and (min-width: 768px) {
-    display: flex;
+    // display: flex;
     flex-basis: calc(100% / 2 - 30px);
     margin-left: 30px;
     margin-top: 30px;
@@ -39,6 +39,9 @@
   }
 }
 .portfolio-list__link-example {
+  display: flex;
+  flex-direction: column;
+  height: 100%;
   transition: box-shadow var(--transition);
   &:hover,
   &:focus {
@@ -76,6 +79,7 @@
   padding: 20px 24px;
   border: 1px solid #eeeeee;
   box-sizing: border-box;
+  flex-grow: 1;
 }
 .portfolio-list__title {
   @include font(18px, null, 36px, 0.06em);
