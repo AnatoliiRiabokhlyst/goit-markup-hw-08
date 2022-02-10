@@ -59,6 +59,10 @@ body {
   color: inherit;
 }
 
+.no-scroll {
+  overflow: hidden;
+}
+
 .hidden {
   position: absolute;
   white-space: nowrap;
@@ -293,6 +297,14 @@ body {
   flex-direction: column;
   justify-content: space-between;
   height: 100%;
+  transform: translateX(0);
+  transition: transform var(--transition), opacity var(--transition), visibility var(--transition);
+}
+
+.mob-menu.is-hidden {
+  transform: translateX(150%);
+  opacity: 0;
+  visibility: hidden;
 }
 
 .menu-close-btn {
@@ -385,6 +397,11 @@ body {
   color: inherit;
 }
 
+.activ {
+  color: var(--accent-color);
+  outline: none;
+}
+
 .hero {
   text-align: center;
   padding-top: 118px;
@@ -393,7 +410,7 @@ body {
   background-repeat: no-repeat;
   background-size: cover;
   background-position: center;
-  background-size: cover, auto;
+  background-size: cover;
   background-image: linear-gradient(to top, rgba(47, 48, 58, 0.4), rgba(47, 48, 58, 0.4)), url(../images/img-hero-mob-1x.jpg);
 }
 
@@ -419,12 +436,14 @@ body {
   .hero {
     padding-top: 200px;
     padding-bottom: 200px;
+    background-size: cover, auto;
     background-image: linear-gradient(to top, rgba(47, 48, 58, 0.4), rgba(47, 48, 58, 0.4)), url(../images/img-hero.jpg);
   }
 }
 
 @media screen and (min-width: 1200px) and (min-device-pixel-ratio: 2), screen and (min-width: 1200px) and (min-resolution: 192dpi), screen and (min-width: 1200px) and (min-resolution: 2dppx) {
   .hero {
+    background-size: 1600px auto;
     background-image: linear-gradient(to top, rgba(47, 48, 58, 0.4), rgba(47, 48, 58, 0.4)), url(../images/img-hero-2x.jpg);
   }
 }
@@ -756,12 +775,12 @@ body {
     align-content: flex-start;
     margin-top: 0;
     margin-left: 0;
+    text-align: left;
   }
 }
 
 .footer__item {
   width: 100%;
-  margin-bottom: 60px;
 }
 
 @media screen and (min-width: 768px) {
@@ -777,6 +796,12 @@ body {
   .footer__item {
     margin-top: 0;
     margin-left: 0;
+  }
+}
+
+@media screen and (max-width: 767px) {
+  .footer__item:not(:last-child) {
+    margin-bottom: 60px;
   }
 }
 
@@ -1208,6 +1233,7 @@ body {
   border-radius: 2px;
   margin-right: 7px;
   cursor: pointer;
+  flex-shrink: 0;
   transition: border-color var(--transition);
 }
 

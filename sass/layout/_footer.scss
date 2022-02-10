@@ -50,11 +50,11 @@
     align-content: flex-start;
     margin-top: 0;
     margin-left: 0;
+    text-align: left;
   }
 }
 .footer__item {
   width: 100%;
-  margin-bottom: 60px;
   @media screen and (min-width: 768px) {
     flex-basis: calc(100% / 2 - 30px);
     margin-top: 60px;
@@ -67,6 +67,9 @@
   }
 }
 .footer__item:not(:last-child) {
+  @media screen and (max-width: 767px) {
+    margin-bottom: 60px;
+  }
   @media screen and (min-width: 1200px) {
     margin-right: 70px;
   }

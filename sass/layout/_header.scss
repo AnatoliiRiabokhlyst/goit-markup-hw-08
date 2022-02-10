@@ -116,6 +116,14 @@
   flex-direction: column;
   justify-content: space-between;
   height: 100%;
+  transform: translateX(0);
+  transition: transform var(--transition), opacity var(--transition),
+    visibility var(--transition);
+}
+.mob-menu.is-hidden {
+  transform: translateX(150%);
+  opacity: 0;
+  visibility: hidden;
 }
 .menu-close-btn {
   position: absolute;
@@ -184,4 +192,8 @@
   &:focus {
     color: inherit;
   }
+}
+.activ {
+  color: var(--accent-color);
+  outline: none;
 }
